@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A616B781FB9F12000874130 /* WebsiteViewController.swift */; };
 		2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA916311FB9DF7100D066D2 /* AppDelegate.swift */; };
-		2AA916341FB9DF7100D066D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA916331FB9DF7100D066D2 /* ViewController.swift */; };
 		2AA916371FB9DF7100D066D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916351FB9DF7100D066D2 /* Main.storyboard */; };
 		2AA916391FB9DF7100D066D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916381FB9DF7100D066D2 /* Assets.xcassets */; };
 		2AA9163C1FB9DF7100D066D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA9163A1FB9DF7100D066D2 /* LaunchScreen.storyboard */; };
+		2AA916471FB9E6FA00D066D2 /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA916461FB9E6FA00D066D2 /* MenuCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A616B781FB9F12000874130 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 		2AA9162E1FB9DF7100D066D2 /* Wir sind fit!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wir sind fit!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA916311FB9DF7100D066D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2AA916331FB9DF7100D066D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AA916361FB9DF7100D066D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AA916381FB9DF7100D066D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA9163B1FB9DF7100D066D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA9163D1FB9DF7100D066D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA916461FB9E6FA00D066D2 /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				2AA916311FB9DF7100D066D2 /* AppDelegate.swift */,
-				2AA916331FB9DF7100D066D2 /* ViewController.swift */,
+				2AA916461FB9E6FA00D066D2 /* MenuCollectionViewController.swift */,
 				2AA916351FB9DF7100D066D2 /* Main.storyboard */,
 				2AA916381FB9DF7100D066D2 /* Assets.xcassets */,
 				2AA9163A1FB9DF7100D066D2 /* LaunchScreen.storyboard */,
 				2AA9163D1FB9DF7100D066D2 /* Info.plist */,
+				2A616B781FB9F12000874130 /* WebsiteViewController.swift */,
 			);
 			path = "Wir sind fit!";
 			sourceTree = "<group>";
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AA916341FB9DF7100D066D2 /* ViewController.swift in Sources */,
+				2AA916471FB9E6FA00D066D2 /* MenuCollectionViewController.swift in Sources */,
+				2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */,
 				2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +281,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGD52CBBYU;
 				INFOPLIST_FILE = "Wir sind fit!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.bachmaier.Wir-sind-fit-";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.bachmaier.wirsindfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,8 +297,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGD52CBBYU;
 				INFOPLIST_FILE = "Wir sind fit!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.bachmaier.Wir-sind-fit-";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.bachmaier.wirsindfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
