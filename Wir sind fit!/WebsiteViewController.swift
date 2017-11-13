@@ -11,14 +11,15 @@ import WebKit
 
 class WebsiteViewController: UIViewController {
 
-    @IBOutlet var webView: WKWebView!
+    @IBOutlet var webView: UIWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let url = URL(string:"https://www.wirsindfit.at/")
         let req = URLRequest(url: url!)
-        self.webView!.load(req)
+        self.webView.loadRequest(req)
     }
 
     override func didReceiveMemoryWarning() {

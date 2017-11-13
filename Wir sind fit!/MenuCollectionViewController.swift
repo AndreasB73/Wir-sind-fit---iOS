@@ -17,9 +17,9 @@ class MenuCollectionViewController: UICollectionViewController {
     var deviceWidth : CGFloat {
         get {
             if (UIDevice.current.userInterfaceIdiom == .pad) {
-                return 255
+                return 126
             } else {
-                return (view.bounds.size.width - 2) / 3
+                return (view.bounds.size.width - 3) / 3
             }
         }
     }
@@ -30,7 +30,7 @@ class MenuCollectionViewController: UICollectionViewController {
         
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         layout.minimumInteritemSpacing = 1.0
-        layout.minimumLineSpacing = 24.0
+        layout.minimumLineSpacing = 1.0
         layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
         layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
 

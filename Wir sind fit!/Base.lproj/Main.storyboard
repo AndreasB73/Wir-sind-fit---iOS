@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -76,12 +75,12 @@
                     <navigationItem key="navigationItem" title="Wir sind fit!" id="OGp-tV-WPM"/>
                     <connections>
                         <segue destination="a0I-4o-Pl2" kind="show" identifier="Website" id="Voo-c6-CEH"/>
-                        <segue destination="Lbm-nk-3vE" kind="show" identifier="Impressum" id="fPg-tK-sAj"/>
+                        <segue destination="kfc-Ra-cTF" kind="show" identifier="Impressum" id="NNP-6a-oZe"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAf-dv-raU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="191"/>
+            <point key="canvasLocation" x="1057" y="458"/>
         </scene>
         <!--WebsiteViewController-->
         <scene sceneID="Fkk-3N-Nba">
@@ -91,75 +90,134 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W4-Bi-bwW">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ald-5J-9Ry">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1W4-Bi-bwW" firstAttribute="top" secondItem="k0j-wi-KvT" secondAttribute="top" id="E7B-Ao-ZC2"/>
-                            <constraint firstAttribute="trailing" secondItem="1W4-Bi-bwW" secondAttribute="trailing" id="JFv-2p-LHZ"/>
-                            <constraint firstItem="1W4-Bi-bwW" firstAttribute="bottom" secondItem="k0j-wi-KvT" secondAttribute="bottom" id="kAf-4o-Q8t"/>
-                            <constraint firstItem="1W4-Bi-bwW" firstAttribute="leading" secondItem="GjB-oo-Ffr" secondAttribute="leading" id="tLf-aQ-Bh9"/>
+                            <constraint firstItem="ald-5J-9Ry" firstAttribute="bottom" secondItem="k0j-wi-KvT" secondAttribute="bottom" id="BbM-mP-hbh"/>
+                            <constraint firstAttribute="trailing" secondItem="ald-5J-9Ry" secondAttribute="trailing" id="UaL-M1-Nza"/>
+                            <constraint firstItem="ald-5J-9Ry" firstAttribute="leading" secondItem="GjB-oo-Ffr" secondAttribute="leading" id="Xsh-0a-A2G"/>
+                            <constraint firstItem="ald-5J-9Ry" firstAttribute="top" secondItem="k0j-wi-KvT" secondAttribute="top" id="jSA-8u-KVL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k0j-wi-KvT"/>
                     </view>
                     <navigationItem key="navigationItem" id="2aU-oW-2h4"/>
                     <connections>
-                        <outlet property="webView" destination="1W4-Bi-bwW" id="25o-Lk-MqA"/>
+                        <outlet property="webView" destination="ald-5J-9Ry" id="0Tf-Qw-3Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyU-7z-hqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="97"/>
+            <point key="canvasLocation" x="2325.5999999999999" y="96.7016491754123"/>
         </scene>
         <!--Impressum-->
-        <scene sceneID="15h-bw-Nfq">
+        <scene sceneID="ImJ-ih-yOY">
             <objects>
-                <viewController title="Impressum" id="Lbm-nk-3vE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gGZ-eM-yy6">
+                <tableViewController title="Impressum" id="kfc-Ra-cTF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9AO-TA-QCg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verantwortlich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-9g-RUK">
-                                <rect key="frame" x="16" y="80" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8cz-IY-iqY">
-                                <rect key="frame" x="0.0" y="109" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Wir sind fit!
+                        <color key="backgroundColor" red="0.8980392814" green="0.85882359740000003" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Verantwortlich" id="htd-61-P3Z">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="311" id="ZNY-4h-tkt">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="311"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZNY-4h-tkt" id="Oms-w7-l4r">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="310.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C3c-QT-z5Y">
+                                                    <rect key="frame" x="16" y="11" width="343" height="289"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Wir sind fit!
 Pichlgasse 20
 1220 Wien
+Österreich
 
-usw.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.8980392814" green="0.85882359740000003" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
-                        <constraints>
-                            <constraint firstItem="8cz-IY-iqY" firstAttribute="leading" secondItem="gGZ-eM-yy6" secondAttribute="leading" id="69j-bd-nP9"/>
-                            <constraint firstItem="z4w-9g-RUK" firstAttribute="top" secondItem="V7X-gV-PTR" secondAttribute="top" constant="16" id="Gaz-hK-PS6"/>
-                            <constraint firstItem="V7X-gV-PTR" firstAttribute="bottom" secondItem="8cz-IY-iqY" secondAttribute="bottom" constant="430" id="RRe-qp-soo"/>
-                            <constraint firstAttribute="trailing" secondItem="8cz-IY-iqY" secondAttribute="trailing" id="bbW-v5-8NR"/>
-                            <constraint firstItem="8cz-IY-iqY" firstAttribute="top" secondItem="z4w-9g-RUK" secondAttribute="bottom" constant="8" symbolic="YES" id="iMp-GF-iOq"/>
-                            <constraint firstItem="z4w-9g-RUK" firstAttribute="leading" secondItem="gGZ-eM-yy6" secondAttribute="leadingMargin" id="nXt-jh-jS8"/>
-                            <constraint firstItem="z4w-9g-RUK" firstAttribute="centerX" secondItem="8cz-IY-iqY" secondAttribute="centerX" id="rag-rV-CY6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="V7X-gV-PTR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zEG-Xa-TME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+Wir bieten Group Fitness Stunden für Erwachsene und Kinder in Groß-Enzersdorf und 1220 Wien an.
+Im Programm: Jumping, Pound, XCO, Zumba, Yoga, Pilates, Blackroll und verschiedene Ganzkörpertrainings wie Bodywork und M.A.X.
+Jede Woche gibt es ein Wochenspecial mit Fokus auf spezielle Muskelgruppen.
+Anmeldung unter www.wirsindfit.at -
+Schnupperstunde ist gratis, jedoch trotzdem bitte anmelden, da bei manchen Workouts die Teilnehmerzahl begrenzt ist.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Kontakt" id="No7-ef-fga">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R4I-bZ-GZ1">
+                                        <rect key="frame" x="0.0" y="422.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4I-bZ-GZ1" id="blc-TX-oJ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+4369918104044" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mI-BK-Xaz">
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.15288224816322327" green="0.86324173212051392" blue="0.060939691960811615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J8X-mm-f8M">
+                                        <rect key="frame" x="0.0" y="466.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8X-mm-f8M" id="tad-5Q-Vnc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wirsindfit.at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70y-Me-HSh">
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.15288224816322327" green="0.86324173212051392" blue="0.060939691960811615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ANQ-nV-S6f">
+                                        <rect key="frame" x="0.0" y="510.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ANQ-nV-S6f" id="YPX-YV-yFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mail@wirsindfit.at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-4t-ZTY">
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.15288224816322327" green="0.86324173212051392" blue="0.060939691960811615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kfc-Ra-cTF" id="nWH-MZ-2Ic"/>
+                            <outlet property="delegate" destination="kfc-Ra-cTF" id="s86-Ps-Shb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxM-ya-xbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316" y="782.15892053973016"/>
+            <point key="canvasLocation" x="2326" y="827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OCv-VM-e4X">
@@ -181,7 +239,8 @@ usw.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OM3-9u-rIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="466"/>
+            <point key="canvasLocation" x="166" y="458"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
