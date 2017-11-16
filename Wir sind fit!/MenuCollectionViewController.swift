@@ -12,7 +12,7 @@ private let reuseIdentifier = "MenuCell"
 
 class MenuCollectionViewController: UICollectionViewController {
 
-    let menuLabels = ["Website", "Standorte", "Kurse", "Jumping", "Groupfitness", "Specials", "Team", "Social Media", "Impressum", "", "FAQ"]
+    let menuLabels = ["Website", "Standorte", "Kurse", "Jumping", "Groupfitness", "Specials", "Team", "Social Media", "FAQ"]
     
     let links = ["Website":        "https://www.wirsindfit.at/",
                  "Jumping":         "https://app1.edoobox.com/de/wsf/?q=jumping",
@@ -37,10 +37,20 @@ class MenuCollectionViewController: UICollectionViewController {
         let itemWidth = deviceWidth
         
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        layout.minimumInteritemSpacing = 1.0
-        layout.minimumLineSpacing = 1.0
-        layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
-        layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
+
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            layout.minimumInteritemSpacing = 80.0
+            layout.minimumLineSpacing = 60.0
+            layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 48.0)
+            layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 48.0)
+        } else {
+            layout.minimumInteritemSpacing = 1.0
+            layout.minimumLineSpacing = 36.0
+            layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
+            layout.headerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 24.0)
+        }
+        
+
 
         collectionView!.collectionViewLayout = layout
     }
@@ -103,9 +113,9 @@ class MenuCollectionViewController: UICollectionViewController {
             cell.imageView.image = UIImage(named: "Team")
         case 7:
             cell.imageView.image = UIImage(named: "Social-Media")
+        //case 8:
+        //    cell.imageView.image = UIImage(named: "impressum")
         case 8:
-            cell.imageView.image = UIImage(named: "impressum")
-        case 10:
             cell.imageView.image = UIImage(named: "FAQ")
         default:
             //cell.imageView.image = UIImage(named: "NoImage")

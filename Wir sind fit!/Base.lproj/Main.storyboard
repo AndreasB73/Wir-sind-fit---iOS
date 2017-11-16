@@ -73,7 +73,13 @@
                             <outlet property="delegate" destination="yWW-V7-6ut" id="Mp5-mp-ob9"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Wir sind fit!" id="OGp-tV-WPM"/>
+                    <navigationItem key="navigationItem" title="Wir sind fit!" id="OGp-tV-WPM">
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="pxT-qo-59E">
+                            <connections>
+                                <segue destination="kfc-Ra-cTF" kind="show" id="zAZ-8P-Zmt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="a0I-4o-Pl2" kind="show" identifier="Website" id="Voo-c6-CEH"/>
                         <segue destination="kfc-Ra-cTF" kind="show" identifier="Impressum" id="NNP-6a-oZe"/>
@@ -340,7 +346,7 @@ Schnupperstunde ist gratis, jedoch trotzdem bitte anmelden, da bei manchen Worko
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxM-ya-xbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2329" y="1013"/>
+            <point key="canvasLocation" x="2118" y="716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OCv-VM-e4X">
@@ -366,7 +372,8 @@ Schnupperstunde ist gratis, jedoch trotzdem bitte anmelden, da bei manchen Worko
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GFF-ZT-741"/>
+        <segue reference="NNP-6a-oZe"/>
+        <segue reference="Voo-c6-CEH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
