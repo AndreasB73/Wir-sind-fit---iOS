@@ -12,14 +12,22 @@ private let reuseIdentifier = "MenuCell"
 
 class MenuCollectionViewController: UICollectionViewController {
 
-    let menuLabels = ["Website", "Standorte", "Kurse", "Jumping", "Groupfitness", "Specials", "Team", "Social Media", "Impressum", "FAQ"]
+    let menuLabels = ["Website", "Standorte", "Kurse", "Jumping", "Groupfitness", "Specials", "Team", "Social Media", "Impressum", "", "FAQ"]
+    
+    let links = ["Website":        "https://www.wirsindfit.at/",
+                 "Jumping":         "https://app1.edoobox.com/de/wsf/?q=jumping",
+                 "Groupfitness":    "https://app1.edoobox.com/de/wsf/?q=Groupfitness",
+                 "Specials":        "https://app1.edoobox.com/de/wsf/?q=special"]
 
+    
+
+    
     var deviceWidth : CGFloat {
         get {
             if (UIDevice.current.userInterfaceIdiom == .pad) {
                 return 126
             } else {
-                return (view.bounds.size.width - 3) / 3
+                return (view.bounds.size.width - 2) / 3
             }
         }
     }
@@ -83,11 +91,27 @@ class MenuCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         cell.label.text =  menuLabels[indexPath.row]
-        if indexPath.row == 0 {
+        
+        switch indexPath.row {
+        case 0,3,4,5:
             cell.imageView.image = UIImage(named: "Logo")
-        } else {
-            cell.imageView.image = UIImage(named: "NoImage")
+        case 1:
+            cell.imageView.image = UIImage(named: "location")
+        case 2:
+            cell.imageView.image = UIImage(named: "calendar")
+        case 6:
+            cell.imageView.image = UIImage(named: "Team")
+        case 7:
+            cell.imageView.image = UIImage(named: "Social-Media")
+        case 8:
+            cell.imageView.image = UIImage(named: "impressum")
+        case 10:
+            cell.imageView.image = UIImage(named: "FAQ")
+        default:
+            //cell.imageView.image = UIImage(named: "NoImage")
+            break
         }
+        
         return cell
     }
 
@@ -122,14 +146,37 @@ class MenuCollectionViewController: UICollectionViewController {
     }
     */
     
+
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let label = self.menuLabels[indexPath.row]
         switch label {
-        case "Website":
-            performSegue(withIdentifier: label, sender: nil)
-        case "Impressum":
+        case "Website",
+             "Jumping",
+             "Groupfitness",
+             "Specials":
+            performSegue(withIdentifier: "Website", sender: label)
+        case "Impressum", "Social Media":
             performSegue(withIdentifier: label, sender: nil)
         default: break
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Website" {
+            let label = sender as! String
+            
+            switch label {
+            case "Website",
+                 "Jumping",
+                 "Groupfitness",
+                 "Specials":
+                let destVC = segue.destination as! WebsiteViewController
+                destVC.title = label
+                destVC.webUrl = URL(string: links[label]!)
+            default: break
+            }
+        
         }
     }
 

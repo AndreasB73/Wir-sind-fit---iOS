@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A616B781FB9F12000874130 /* WebsiteViewController.swift */; };
+		2A719BBD1FBDDDB00076A450 /* SocialMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */; };
 		2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA916311FB9DF7100D066D2 /* AppDelegate.swift */; };
 		2AA916371FB9DF7100D066D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916351FB9DF7100D066D2 /* Main.storyboard */; };
 		2AA916391FB9DF7100D066D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916381FB9DF7100D066D2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2A616B781FB9F12000874130 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
+		2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaTableViewController.swift; sourceTree = "<group>"; };
 		2AA9162E1FB9DF7100D066D2 /* Wir sind fit!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wir sind fit!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA916311FB9DF7100D066D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA916361FB9DF7100D066D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				2AA9163A1FB9DF7100D066D2 /* LaunchScreen.storyboard */,
 				2AA9163D1FB9DF7100D066D2 /* Info.plist */,
 				2A616B781FB9F12000874130 /* WebsiteViewController.swift */,
+				2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */,
 			);
 			path = "Wir sind fit!";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA916471FB9E6FA00D066D2 /* MenuCollectionViewController.swift in Sources */,
+				2A719BBD1FBDDDB00076A450 /* SocialMediaTableViewController.swift in Sources */,
 				2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */,
 				2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */,
 			);

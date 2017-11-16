@@ -12,16 +12,27 @@ import WebKit
 class WebsiteViewController: UIViewController {
 
     @IBOutlet var webView: UIWebView!
+    var webUrl : URL? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = URL(string:"https://www.wirsindfit.at/")
-        let req = URLRequest(url: url!)
-        self.webView.loadRequest(req)
+        load()
     }
-
+    
+    @IBAction func loadStartsite(_ sender: UIBarButtonItem) {
+        load()
+    }
+    
+    func load()
+    {
+        if let url = webUrl {
+            let req = URLRequest(url: url)
+            self.webView.loadRequest(req)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
