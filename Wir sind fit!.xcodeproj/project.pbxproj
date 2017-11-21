@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A55FCF81FC4729E00A9F76C /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55FCF71FC4729E00A9F76C /* FAQTableViewController.swift */; };
 		2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A616B781FB9F12000874130 /* WebsiteViewController.swift */; };
 		2A719BBD1FBDDDB00076A450 /* SocialMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */; };
+		2AA129631FC4907A00EC3D3D /* FAQDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA129621FC4907A00EC3D3D /* FAQDetailTableViewController.swift */; };
 		2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA916311FB9DF7100D066D2 /* AppDelegate.swift */; };
 		2AA916371FB9DF7100D066D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916351FB9DF7100D066D2 /* Main.storyboard */; };
 		2AA916391FB9DF7100D066D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA916381FB9DF7100D066D2 /* Assets.xcassets */; };
@@ -17,8 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A55FCF51FC4712800A9F76C /* faq.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = faq.php; sourceTree = "<group>"; };
+		2A55FCF71FC4729E00A9F76C /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		2A616B781FB9F12000874130 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 		2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaTableViewController.swift; sourceTree = "<group>"; };
+		2AA129621FC4907A00EC3D3D /* FAQDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQDetailTableViewController.swift; sourceTree = "<group>"; };
 		2AA9162E1FB9DF7100D066D2 /* Wir sind fit!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wir sind fit!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA916311FB9DF7100D066D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA916361FB9DF7100D066D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A55FCF41FC4710600A9F76C /* PHP */ = {
+			isa = PBXGroup;
+			children = (
+				2A55FCF51FC4712800A9F76C /* faq.php */,
+			);
+			path = PHP;
+			sourceTree = "<group>";
+		};
 		2AA916251FB9DF7100D066D2 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 		2AA916301FB9DF7100D066D2 /* Wir sind fit! */ = {
 			isa = PBXGroup;
 			children = (
+				2A55FCF41FC4710600A9F76C /* PHP */,
 				2AA916311FB9DF7100D066D2 /* AppDelegate.swift */,
 				2AA916461FB9E6FA00D066D2 /* MenuCollectionViewController.swift */,
 				2AA916351FB9DF7100D066D2 /* Main.storyboard */,
@@ -66,6 +80,8 @@
 				2AA9163D1FB9DF7100D066D2 /* Info.plist */,
 				2A616B781FB9F12000874130 /* WebsiteViewController.swift */,
 				2A719BBC1FBDDDB00076A450 /* SocialMediaTableViewController.swift */,
+				2A55FCF71FC4729E00A9F76C /* FAQTableViewController.swift */,
+				2AA129621FC4907A00EC3D3D /* FAQDetailTableViewController.swift */,
 			);
 			path = "Wir sind fit!";
 			sourceTree = "<group>";
@@ -143,9 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA916471FB9E6FA00D066D2 /* MenuCollectionViewController.swift in Sources */,
+				2AA129631FC4907A00EC3D3D /* FAQDetailTableViewController.swift in Sources */,
 				2A719BBD1FBDDDB00076A450 /* SocialMediaTableViewController.swift in Sources */,
 				2A616B791FB9F12000874130 /* WebsiteViewController.swift in Sources */,
 				2AA916321FB9DF7100D066D2 /* AppDelegate.swift in Sources */,
+				2A55FCF81FC4729E00A9F76C /* FAQTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
